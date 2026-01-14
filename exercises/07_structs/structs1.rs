@@ -6,7 +6,7 @@ struct ColorRegularStruct {
     blue: i32,
 }
 
-struct ColorTupleStruct(i32, i32, i32);
+struct ColorTupleStruct(i32,i32,i32);
 
 #[derive(Debug)]
 struct UnitStruct;
@@ -22,7 +22,7 @@ mod tests {
     #[test]
     fn regular_structs() {
         // TODO: Instantiate a regular struct.
-        let green = ColorRegularStruct { red: 0, green: 255, blue: 0};
+        let green = ColorRegularStruct{red: 0, green: 255, blue: 0};
 
         assert_eq!(green.red, 0);
         assert_eq!(green.green, 255);
