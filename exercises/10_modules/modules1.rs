@@ -10,7 +10,6 @@ mod sausage_factory {
         println!("sausage!");
     }
 }
-
 fn main() {
     sausage_factory::make_sausage();
 }
