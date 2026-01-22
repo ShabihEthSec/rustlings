@@ -34,18 +34,19 @@ fn build_scores_table(results: &str) -> HashMap<&str, TeamScores> {
         scores.entry(team_1_name).and_modify(|team| {
             team.goals_scored += team_1_score;
             team.goals_conceded += team_2_score;
-        }).or_insert(TeamScores{
+        }).or_insert(TeamScores {
             goals_scored: team_1_score,
             goals_conceded: team_2_score,
         });
         scores.entry(team_2_name).and_modify(|team| {
             team.goals_scored += team_2_score;
             team.goals_conceded += team_1_score;
-        }).or_insert(TeamScores{
+        }).or_insert(TeamScores {
             goals_scored: team_2_score,
             goals_conceded: team_1_score,
         });
     }
+
     scores
 }
 
